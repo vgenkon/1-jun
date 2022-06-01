@@ -3,14 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	numbers := make([]float64, 3)
-	numbers[0] = 19.7
-	numbers[2] = 25.2
-	for i, number := range numbers {
-		fmt.Println(i, number)
-	}
-	var letters = []string{"a", "b", "c"}
-	for i, letter := range letters {
-		fmt.Println(i, letter)
-	}
+	slice := []int{1, 2, 3, 4, 5, 5, 6, 7}
+	slice = append(slice[:4], slice[5:]...)
+	fmt.Println(slice)
 }
